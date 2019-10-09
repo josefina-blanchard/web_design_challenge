@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="Assets/styles.css">
+    <title>Visualizations</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="WebVisualization.html" target="_blank">Summary</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item inactive">
+                <a class="nav-link" href="visualization_summary.html" target="_blank">Visualizations<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="data.html" target="_blank">Data</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Plots
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="lat_vs_cloud.html" target="_blank">Cloudiness</a>
+                    <a class="dropdown-item" href="lat_vs_hum.html" target="_blank">Humidity</a>
+                    <a class="dropdown-item" href="lat_vs_temp.html" target="_blank">Temperature</a>
+                    <a class="dropdown-item" href="lat_vs_wind.html" target="_blank">Wind Speed</a>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <section class="visual">
+                    <h1>Visualizations</h1>
+                    <div class="plots">
+                        <a href="Visualizations/Lat_vs_cloud.png" target="#">
+                            <img src="Visualizations/Lat_vs_cloud.png" alt="Plot of Latitud vs. Cloudiness">
+                        </a>
+                        <a href="Visualizations/Lat_vs_hum.png" target="#">
+                            <img src="Visualizations/Lat_vs_hum.png" alt="Plot of Latitud vs. Humidity">
+                        </a>
+                        <a href="Visualizations/Lat_vs_temp.png" target="#">
+                            <img src="Visualizations/Lat_vs_temp.png" alt="Plot of Latitud vs. Temperature">
+                        </a>
+                        <a href="Visualizations/Lat_vs_wind.png" target="#">
+                            <img src="Visualizations/Lat_vs_wind.png" alt="Plot of Latitud vs. Wind Speed">
+                        </a>
+                    </div>     
+                </section>
+            </div>
+        </div>  
+    </div> 
+</body>
+
+<script>
+  const dropdowns = document.querySelectorAll('li.dropdown');
+
+  function toggleDropdown () {
+    const menu = this.querySelector('.dropdown-menu');  
+    this.classList.toggle('show');
+    menu.classList.toggle('show');
+  };
+
+  dropdowns.forEach(dropdown => dropdown.addEventListener('click', toggleDropdown));
+</script>
+</html>

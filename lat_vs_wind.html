@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="Assets/styles.css">
+    <title>Wind Speed</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="WebVisualization.html" target="_blank">Summary</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="visualization_summary.html" target="_blank">Visualizations<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="data.html" target="_blank">Data</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Plots
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="lat_vs_cloud.html" target="_blank">Cloudiness</a>
+                    <a class="dropdown-item" href="lat_vs_hum.html" target="_blank">Humidity</a>
+                    <a class="dropdown-item" href="lat_vs_temp.html" target="_blank">Temperature</a>
+                    <a class="dropdown-item" href="lat_vs_wind.html" target="_blank">Wind Speed</a>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-lg-7">
+                <section class="description">
+                    <h1>WeatherPy Project</h1>
+                    <h2>Latitude vs. Wind Speed</h2>
+                    <div class="plot">
+                            <img src="Visualizations/Lat_vs_wind.png" alt="Graph displaying the relationship between temperature and latitude for the cities queried">
+                    </div>
+                    <P style="margin-left: 1%px">
+                        Unequal heating of the Earth’s surface also forms large global wind patterns. In area near the equator, the sun is almost directly overhead for most of the year. 
+                        Warm air rises at the equator and moves toward the poles. At the poles, the cooler air sinks and moves back toward the equator. However, it is not this simple. 
+                        Global winds do not move directly from north to south or south to north because the Earth rotates. All winds in the Northern Hemisphere appear to curve to right as they move. 
+                        In the southern hemisphere, winds appear to curve to the left. This is known as the Coriolis effect, which is the apparent shift in the path of any fluid or object moving 
+                        about the surface of the Earth due to the rotation of the Earth.
+                    </P>
+                    <p>
+                        Near the equator, the trade winds converge into a broad east to west area of light winds. The area is known as the doldrums because there are light winds. About 30° north and 
+                        south of the equator, the warm, moist air that rose vertically cools and begins to sink. Here the sky is clear. There are few clouds and little rainfall. Winds are calm. 
+                        The air moving back toward the equator forms warm, steady winds, known as the trade winds.
+                    </P>
+                    <p>    
+                        As shown in the graph, the wind speed close to the Equator is pretty steady.
+                    </p>
+                </section> 
+            </div>
+
+            <div class="col-sm-12 col-lg-5">
+                <section class="visual">
+                    <h1>Visualizations</h1>
+                    <div class="plots">
+                        <a href="Visualizations/Lat_vs_cloud.png" target="#">
+                            <img src="Visualizations/Lat_vs_cloud.png" alt="Plot of Latitud vs. Cloudiness">
+                        </a>
+                        <a href="Visualizations/Lat_vs_hum.png" target="#">
+                            <img src="Visualizations/Lat_vs_hum.png" alt="Plot of Latitud vs. Humidity">
+                        </a>
+                        <a href="Visualizations/Lat_vs_temp.png" target="#">
+                            <img src="Visualizations/Lat_vs_temp.png" alt="Plot of Latitud vs. Temperature">
+                        </a>
+                        <a href="Visualizations/Lat_vs_wind.png" target="#">
+                            <img src="Visualizations/Lat_vs_wind.png" alt="Plot of Latitud vs. Wind Speed">
+                        </a>
+                    </div>     
+                </section>
+            </div>
+        </div>  
+    </div> 
+</body>
+
+<script>
+  const dropdowns = document.querySelectorAll('li.dropdown');
+
+  function toggleDropdown () {
+    const menu = this.querySelector('.dropdown-menu');  
+    this.classList.toggle('show');
+    menu.classList.toggle('show');
+  };
+
+  dropdowns.forEach(dropdown => dropdown.addEventListener('click', toggleDropdown));
+</script>
+</html>
